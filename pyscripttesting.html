@@ -4,8 +4,36 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   <body>
+    <form action="/action_page.php">
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" value="John"><br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+    <input type="submit" value="Submit">
+    </form>
+    
+    <form>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+      <label for="vehicle1"> I have a bike</label><br>
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+      <label for="vehicle2"> I have a car</label><br>
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+      <label for="vehicle3"> I have a boat</label>
+    </form>
+    
+    <form>
+      <input type="radio" id="html" name="fav_language" value="HTML">
+      <label for="html">HTML</label><br>
+      <input type="radio" id="css" name="fav_language" value="CSS">
+      <label for="css">CSS</label><br>
+      <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+      <label for="javascript">JavaScript</label>
+    </form>
+    
+    
     <py-script> 
       print('Hello, World!')
+      <py-inputbox>
       peso = float(input("Ingrese su peso actual: "))
       estatura = float(input("ingrese su estatura: "))
       sexo = input("Hombre: h, Mujer: m: ")
@@ -14,7 +42,17 @@
       imc = float(peso/talla2)
       print(talla2)
       print ("imc es: ", "%.2f" % imc)
-    
+   
+      print("Let's compute π:")
+        def compute_pi(n):
+            pi = 2
+            for i in range(1,n):
+                pi *= 4 * i ** 2 / (4 * i ** 2 - 1)
+            return pi
+
+        pi = compute_pi(100000)
+        s = f"π is approximately {pi:.3f}"
+        print(s)
  
     </py-script>
   </body>
