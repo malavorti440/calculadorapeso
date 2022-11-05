@@ -1,8 +1,11 @@
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
   <head>
+    <title>PYTHON CALCULADORA</title>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
+  
   <body>
     <form action="/action_page.php">
     <label for="fname">First name:</label><br>
@@ -34,9 +37,17 @@
     <py-script> 
       print('Hello, World!')
       <py-inputbox>
-      peso = float(input("Ingrese su peso actual: "))
-      estatura = float(input("ingrese su estatura: "))
-      sexo = input("Hombre: h, Mujer: m: ")
+        print("Ingrese su peso actual: ")
+        peso = float(input("Ingrese su peso actual: "))
+      </py-inputbox>
+      <py-inputbox>
+        print("Ingrese su estatura: ")
+        estatura = float(input("ingrese su estatura: "))
+      </py_inputbox>
+      <py-inputbox>
+        print("Hombre: h, Mujer: m: ")
+        sexo = input("Hombre: h, Mujer: m: ")
+      </py-inputbox>
 
       talla2 = float(estatura*estatura)
       imc = float(peso/talla2)
