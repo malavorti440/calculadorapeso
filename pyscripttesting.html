@@ -4,6 +4,37 @@
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
   </head>
   
+  <style>
+    input[type=number], select {
+      width: 100%;
+      padding: 12px 20px;
+      display: inline-block;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    
+    input[type=submit] {
+      width:100%;
+      background-color: #4CAF50;
+      color: white;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+      background-color: #45a049
+    }
+    
+    div {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px
+    }
+      
+  
   <body>
     <form onsubmit="return false">
       <label for="peso">INGRESE PESO:</label><br>
@@ -22,17 +53,16 @@
     
     <p>RESULTADOS:</p>
     <p id = 'output'></p>
-    <py-script> 
-      print('Hello, World!')
-      def sub(*args,**kwargs):
-        result_place = Element('output')
-        result_place.write(f"{Element('peso').value} y talla es {Element('talla').value} y es {Element('sexo').value}")
-      
-      def sub1(peso,talla):
+    <py-script>
+          
+      def sub(peso,talla,sexo):
         talla2 = float(talla*talla)
         imc = float(peso/talla2)
+        result_place = Element('output')
+        result_place.write(f"{Element('peso').value} y talla es {Element('talla').value} y es {Element('sexo').value}")
         print(imc)
       
+           
      
     </py-script>
   
