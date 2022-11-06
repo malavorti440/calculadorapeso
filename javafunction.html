@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <title>CALCULADORA PESO</title>  
+</head>
 <body>
+  <input type="number" step=0.01 id="t1">
+  <input type="number" step=0.01 id="t2">
+  <button onclick="imc(document.getElementbyId('t1').value,document.getElementbyId('t2').value)">CALCULAR</button>
+  
 
-<h1>My First Web Page</h1>
-<p>My First Paragraph</p>
-
-<p id="demo"></p>
-
-<script>
-
-function toCelsius(fahrenheit) {
-  return (5/9) * (fahrenheit-32);
-}
-document.getElementById("demo").innerHTML = toCelsius;
-</script>
+  <script>
+    function imc(peso,talla){
+      let talla2 = (talla*talla)
+      let imc = (peso/talla2)
+      document.write("El imc es: "+imc+);
+    }
+  </script>
 
 </body>
 </html>
