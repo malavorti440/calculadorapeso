@@ -55,11 +55,9 @@
     <p id = 'output'></p>
     <py-script>
           
-      def sub(peso,talla,sexo):
+      def sub:
         talla2 = float(talla*talla)
         imc = float(peso/talla2)
-        result_place = Element('output')
-        result_place.write(f"{Element('peso').value} y talla es {Element('talla').value} y es {Element('sexo').value}")
         print(imc)
       
            
