@@ -8,18 +8,20 @@
       let talla = parseFloat(document.getElementById('peso').value);
       let peso = parseFloat(document.getElementById('talla').value);
       if(talla > 0)
-        talla2 = talla*talla
-        document.getElementById('result').value = talla*talla;
-        document.getElementById('result').value = peso/talla;
+        document.getElementById('result').value = (peso/(talla*talla));
+        
     }
   </script>  
   
 </head>
 <body>
-  <input type="number" step=0.01 id="peso">
-  <input type="number" step=0.01 id="talla">
-  <button onclick="imc();">CALCULAR</button>
-  <input type="number" step=0.01 id="result"/>
+  <form>
+    <label for="peso">PESO:</label><br>
+    <input type="number" step=0.01 id="peso">
+    <label for="talla">TALLA:</label><br>
+    <input type="number" step=0.01 id="talla">
+    <button onclick="imc();">CALCULAR</button>
+    <input type="number" step=0.01 id="result"/>
   
 
   
