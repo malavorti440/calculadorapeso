@@ -5,17 +5,31 @@
   </head>
   
   <body>
+    <form onsubmit="return false">
+      <label for="peso">INGRESE PESO:</label><br>
+      <input type="number" id="peso" name="Peso" value=""><br>
+      
+      <label for="talla">INGRESE ESTATURA:</label><br>
+      <input type="number" id="talla" name="Estatura" value=""><br>
+      
+      <select name="sexo" id="sexo">
+        <option value="m">Mujer:m</option>
+        <option value="h">Hombre:h</option>
+      </select>
+      
+      <input pys-onClick="sub" type="submit" id="btn-form" value="submit">
+        
   <py-script> 
       print('Hello, World!')
       peso = float(input("Ingrese su peso actual: "))
-      estatura = float(input("ingrese su estatura: "))
+      estatura = float(input("Ingrese su estatura: "))
       sexo = input("Hombre: h, Mujer: m: ")
     
 
       talla2 = float(estatura*estatura)
       imc = float(peso/talla2)
       print(talla2)
-      print ("imc es: ", "%.2f" % imc)
+      print ("imc es: ", ".2f" % imc)
   </py-script>
   
   </body>
