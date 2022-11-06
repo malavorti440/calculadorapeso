@@ -7,10 +7,10 @@
   <body>
     <form onsubmit="return false">
       <label for="peso">INGRESE PESO:</label><br>
-      <input type="number" id="peso" name="Peso" value=""><br>
+      <input type="number" step=0.1 id="peso" name="Peso" value=""><br>
       
       <label for="talla">INGRESE ESTATURA:</label><br>
-      <input type="number" id="talla" name="Estatura" value=""><br>
+      <input type="number" step=0.1 id="talla" name="Estatura" value=""><br>
       
       <select name="sexo" id="sexo">
         <option value="m">Mujer:m</option>
@@ -18,19 +18,23 @@
       </select>
       
       <input pys-onClick="sub" type="submit" id="btn-form" value="submit">
-        
-  <py-script> 
-      print('Hello, World!')
-      peso = float(input("Ingrese su peso actual: "))
-      estatura = float(input("Ingrese su estatura: "))
-      sexo = input("Hombre: h, Mujer: m: ")
+    </form>
     
-
-      talla2 = float(estatura*estatura)
-      imc = float(peso/talla2)
-      print(talla2)
-      print ("imc es: ", ".2f" % imc)
-  </py-script>
+    <p>RESULTADOS:</p>
+    <p id = 'output'></p>
+    <py-script> 
+      print('Hello, World!')
+      def sub(*args,**kwargs):
+        result_place = Element('output')
+        result_place.write(f"{Element('peso').value} y talla es {Element('talla').value} y es {Element('sexo').value}")
+      
+      def sub1(peso,talla):
+        talla2 = float(talla*talla)
+        imc = float(peso/talla2)
+        print(imc)
+      
+     
+    </py-script>
   
   </body>
 </html>
